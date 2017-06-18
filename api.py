@@ -29,7 +29,7 @@ database = Database()
 
 
 def get_movie_title(imdb_id):
-    r = urlfetch.fetch('http://www.omdbapi.com/?i=' + imdb_id)
+    r = urlfetch.fetch('http://www.omdbapi.com/?apikey=cd5c29e6&i=' + imdb_id)
     if r.status_code == 200:
         return simplejson.loads(r.content).get('Title')
 
